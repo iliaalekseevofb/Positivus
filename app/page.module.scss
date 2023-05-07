@@ -1,0 +1,61 @@
+/* Colors */
+$primary-color-green: #B9FF66;
+$primary-color-black: #191A23;
+$primary-color-gray: #F3F3F3;
+
+/* Font sizes */
+$primary-font-size-3xl: 60px;
+$primary-font-size-2x: 43px;
+$primary-font-size-xl: 40px;
+$primary-font-size-lg: 36px;
+$primary-font-size-md: 30px;
+$primary-font-size-sm: 26px;
+$primary-font-size-xs: 20px;
+$primary-font-size-2xs: 18px;
+$primary-font-size-3xs: 16px;
+
+/* Font weights */
+$primary-font-weight-semibold: 500;
+$primary-font-weight-normal: 400;
+
+/* Transition */
+$primary-transition: '0.2s ease-in-out';
+
+/* Screens */
+$media-lg: 'only screen and (max-width: 1280px)';
+$media-md: 'only screen and (max-width: 1024px)';
+$media-sm: 'only screen and (max-width: 856px)';
+$media-xs: 'only screen and (max-width: 480px)';
+
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  padding: 40px 60px;
+  transition: #{$primary-transition};
+}
+
+@media #{$media-lg} {
+  .container {
+    padding: 40px;
+  }
+}
+
+@media #{$media-md} {
+  .container {
+    padding: 30px;
+  }
+}
+
+@media #{$media-sm} {
+  .container {
+    padding: 10px 20px;
+  }
+}
