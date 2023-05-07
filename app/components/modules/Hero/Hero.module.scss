@@ -1,0 +1,133 @@
+@import '/app/page.module.scss';
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  margin-top: 50px;
+
+  &__text {
+    flex: 5 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 35px;
+
+    &_title {
+      margin: 0;
+      font-size: $primary-font-size-3xl;
+      line-height: 76px;
+    }
+
+    &_description {
+      margin: 0;
+      font-size: $primary-font-size-xs;
+      line-height: 28px;
+    }
+
+    &_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $primary-font-size-xs;
+      font-weight: $primary-font-weight-normal;
+      transition: #{$primary-transition};
+      background-color: $primary-color-black;
+      padding: 20px 35px;
+      color: #FFF;
+      border-radius: 14px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &_button:hover {
+      background-color: $primary-color-green;
+      color: $primary-color-black;
+    }
+  }
+
+  &__banner {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__banner[id='banner_mobile'] {
+    display: none;
+  }
+}
+
+@media #{$media-xl} {
+  .hero {
+    gap: 25px;
+
+    &__text {
+      flex: 1 0;
+      gap: 20px;
+
+      &_title {
+        font-size: $primary-font-size-2xl;
+        line-height: 60px;
+      }
+
+      &_button {
+        font-size: $primary-font-size-2xs;
+        padding: 15px 25px;
+      }
+    }
+
+    &__banner {
+      flex: 1;
+    }
+  }
+}
+
+@media #{$media-lg} {
+  .hero {
+    &__text {
+      &_title {
+        font-size: $primary-font-size-lg;
+        line-height: 55px;
+      }
+
+      &_description {
+        font-size: $primary-font-size-3xs;
+        line-height: 28px;
+      }
+
+      &_button {
+        font-size: $primary-font-size-3xs;
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+
+@media #{$media-sm} {
+  .hero {
+    &__banner[id='banner_desktop'] {
+      display: none;
+    }
+  
+    &__banner[id='banner_mobile'] {
+      display: block;
+    }
+
+    &__text {
+      &_button {
+        width: 100%;
+      }
+    }
+  }
+}

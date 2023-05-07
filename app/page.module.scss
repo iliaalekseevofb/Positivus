@@ -5,7 +5,7 @@ $primary-color-gray: #F3F3F3;
 
 /* Font sizes */
 $primary-font-size-3xl: 60px;
-$primary-font-size-2x: 43px;
+$primary-font-size-2xl: 43px;
 $primary-font-size-xl: 40px;
 $primary-font-size-lg: 36px;
 $primary-font-size-md: 30px;
@@ -22,9 +22,10 @@ $primary-font-weight-normal: 400;
 $primary-transition: '0.2s ease-in-out';
 
 /* Screens */
-$media-lg: 'only screen and (max-width: 1280px)';
-$media-md: 'only screen and (max-width: 1024px)';
-$media-sm: 'only screen and (max-width: 856px)';
+$media-xl: 'only screen and (max-width: 1280px)';
+$media-lg: 'only screen and (max-width: 1024px)';
+$media-md: 'only screen and (max-width: 856px)';
+$media-sm: 'only screen and (max-width: 640px)';
 $media-xs: 'only screen and (max-width: 480px)';
 
 .main {
