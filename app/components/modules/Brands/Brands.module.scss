@@ -1,0 +1,53 @@
+@import '/app/page.module.scss';
+
+.brands {
+  display: grid;
+  grid-template-columns: repeat(6, 150px);
+  grid-template-rows: repeat(1, auto);
+  justify-content: space-between;
+  place-items: center;
+  width: 100%;
+  margin-top: 50px;
+
+  &__logo {
+    position: relative;
+    width: 150px;
+    height: 48px;
+
+    img {
+      transition: #{$primary-transition};
+      filter: grayscale(100%);
+    }
+  }
+
+  &__logo:hover {
+    img {
+      filter: grayscale(0);
+    }
+  }
+}
+
+@media #{$media-xl} {
+  .brands {
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(2, auto);
+    gap: 50px;
+  }
+}
+
+@media #{$media-sm} {
+  .brands {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 25px;
+  }
+}
+
+@media #{$media-xs} {
+  .brands {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
+    gap: 50px;
+    margin-top: 25px;
+  }
+}
