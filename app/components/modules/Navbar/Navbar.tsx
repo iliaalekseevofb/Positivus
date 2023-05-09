@@ -36,13 +36,13 @@ const Navbar = (): JSX.Element => {
       {/* Desktop menu */}
       <div id='desktop_menu' className={styles.navbar__menu}>
         {navLinks.map((navLink: NavLink) => (
-          <Link
+          <a
             className={styles.navbar__link}
             key={navLink.id}
             href={`#${navLink.id}`}
           >
             {navLink.text}
-          </Link>
+          </a>
         ))}
         <button type='button' className={styles.navbar__button}>
           Request a quote
@@ -73,13 +73,13 @@ const Navbar = (): JSX.Element => {
         <div className={styles.navbar__dropdown}>
           <div className={styles.navbar__dropdown_links}>
             {navLinks.map((navLink: NavLink) => (
-              <Link
+              <a
                 className={styles.navbar__link}
                 key={navLink.id}
                 href={`#${navLink.id}`}
               >
                 {navLink.text}
-              </Link>
+              </a>
             ))}
           </div>
           <button className={styles.navbar__button}>
