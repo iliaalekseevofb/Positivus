@@ -24,8 +24,8 @@ $primary-transition: '0.2s ease-in-out';
 /* Screens */
 $media-xl: 'only screen and (max-width: 1280px)';
 $media-lg: 'only screen and (max-width: 1024px)';
-$media-md: 'only screen and (max-width: 856px)';
-$media-sm: 'only screen and (max-width: 640px)';
+$media-md: 'only screen and (max-width: 900px)';
+$media-sm: 'only screen and (max-width: 720px)';
 $media-xs: 'only screen and (max-width: 480px)';
 
 .main {
@@ -39,24 +39,24 @@ $media-xs: 'only screen and (max-width: 480px)';
   max-width: 1240px;
   width: 100%;
   height: 100%;
-  padding: 60px 100px;
+  padding: 60px;
   transition: #{$primary-transition};
 }
 
 @media #{$media-lg} {
   .container {
-    padding: 50px 75px;
+    padding: 50px;
   }
 }
 
 @media #{$media-md} {
   .container {
-    padding: 40px 50px;
+    padding: 40px;
   }
 }
 
 @media #{$media-sm} {
   .container {
-    padding: 30px 25px;
+    padding: 30px;
   }
 }

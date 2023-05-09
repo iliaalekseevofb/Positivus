@@ -77,7 +77,8 @@ const Navbar = (): JSX.Element => {
                 className={styles.navbar__link}
                 key={navLink.id}
                 href={`#${navLink.id}`}
-              >
+                onClick={() => setIsDropdownOpened(prev => !prev)}
+                >
                 {navLink.text}
               </a>
             ))}

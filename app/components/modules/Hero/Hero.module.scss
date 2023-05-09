@@ -9,7 +9,7 @@
   margin-top: 50px;
 
   &__text {
-    flex: 5 0;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -30,7 +30,7 @@
   }
 
   &__banner {
-    flex: 4;
+    flex: 1;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -52,7 +52,6 @@
     gap: 25px;
 
     &__text {
-      flex: 1 0;
       gap: 20px;
 
       &_title {
@@ -65,10 +64,6 @@
         padding: 15px 25px;
       }
     }
-
-    &__banner {
-      flex: 1;
-    }
   }
 }
 
@@ -78,11 +73,6 @@
       &_title {
         font-size: $primary-font-size-lg;
         line-height: 55px;
-      }
-
-      &_description {
-        font-size: $primary-font-size-3xs;
-        line-height: 28px;
       }
 
       &_button {
