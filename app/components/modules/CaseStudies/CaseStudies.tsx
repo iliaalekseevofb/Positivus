@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './CaseStudies.module.scss';
+import SectionHeader from '../../elements/SectionHeader/SectionHeader';
 
 const Case = ({ text }: { text: string }) => {
   return (
@@ -31,14 +32,10 @@ const casesDescriptions: string[] = [
 const CaseStudies = (): JSX.Element => {
   return (
     <section className={styles.caseStudies}>
-      <header className={styles.caseStudies__header}>
-        <h2 className={styles.caseStudies__header_title}>
-          Case Studies
-        </h2>
-        <p className={styles.caseStudies__header_description}>
-          Explore Real-Life Examples of Our Proven Digital<br /> Marketing Success through Our Case Studies
-        </p>
-      </header>
+      <SectionHeader
+        title='Case Studies'
+        description='Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies'
+      />
       <div className={styles.caseStudies__cases}>
         {casesDescriptions.map((caseDescription: string, index: number) => (
           <Case

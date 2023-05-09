@@ -1,34 +1,8 @@
 @import '/app/page.module.scss';
 
 .services {
-  margin-top: 80px;
   width: 100%;
   height: auto;
-
-  &__header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
-    height: auto;
-    margin: 0;
-
-    &_title {
-      margin: 0;
-      padding: 0 7px;
-      font-size: $primary-font-size-xl;
-      line-height: 50px;
-      background-color: $primary-color-green;
-      border-radius: 7px;
-    }
-
-    &_description {
-      margin: 0;
-      font-size: $primary-font-size-2xs;
-      line-height: 23px;
-    }
-  }
 
   &__cards {
     display: grid;
@@ -36,187 +10,6 @@
     grid-template-rows: repeat(3, auto);
     gap: 40px;
     width: 100%;
-    margin-top: 40px;
-  }
-
-  &__card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-    height: 220px;
-    padding: 50px;
-    border: 1px solid $primary-color-black;
-    border-radius: 45px;
-    box-shadow: 0px 5px 0px $primary-color-black;
-    transition: #{$primary-transition};
-
-    &_content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      height: 100%;
-
-      &__title {
-        margin: 0;
-        font-size: $primary-font-size-md;
-        font-weight: $primary-font-weight-semibold;
-        color: $primary-color-black;
-        border-radius: 7px;
-        padding: 7px;
-      }
-
-      &__button {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        border: none;
-        outline: none;
-        background-color: transparent;
-        cursor: pointer;
-
-        &_image {
-          position: relative;
-          width: 41px;
-          height: 41px;
-        }
-
-        &_text {
-          font-size: $primary-font-size-xs;
-          line-height: 28px;
-          color: $primary-color-black;
-          white-space: nowrap;
-        }
-      }
-    }
-
-    &_image {
-      flex-shrink: 0;
-      position: relative;
-      width: 210px;
-      height: 210px;
-      transition: #{$primary-transition};
-    }
-
-    &_image[id='service_card_image_mobile'] {
-      display: none;
-    }
-  }
-
-  &__card[color='green'] {
-    background-color: $primary-color-green;
-
-    .services__card_content {
-      &__title {
-        background-color: #FFF;
-      }
-
-      &__button {
-        &_text {
-          color: $primary-color-black
-        }
-      }
-    }
-  }
-
-  &__card[color='black'] {
-    background-color: $primary-color-black;
-
-    .services__card_content {
-      &__title {
-        background-color: #FFF;
-      }
-
-      &__button {
-        &_text {
-          color: #FFF;
-        }
-      }
-    }
-  }
-
-  &__card[color='gray'] {
-    background-color: $primary-color-gray;
-
-    .services__card_content {
-      &__title {
-        background-color: $primary-color-green;
-      }
-
-      &__button {
-        &_text {
-          color: $primary-color-black
-        }
-      }
-    }
-  }
-
-  &__banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    height: 240px;
-    margin-top: 120px;
-    padding: 50px;
-    border-radius: 45px;
-    background-color: $primary-color-gray;
-
-    &_text {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      max-width: 500px;
-
-      h4 {
-        margin: 0;
-        font-size: $primary-font-size-md;
-        font-weight: $primary-font-weight-semibold;
-      }
-
-      &__description{
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        p {
-          margin: 0;
-          font-size: $primary-font-size-2xs;
-          line-height: 23px;
-        }
-      }
-
-      button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: fit-content;
-        font-size: $primary-font-size-xs;
-        font-weight: $primary-font-weight-normal;
-        transition: #{$primary-transition};
-        background-color: $primary-color-black;
-        padding: 20px 35px;
-        color: #FFF;
-        border-radius: 14px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-      }
-  
-      button:hover {
-        background-color: $primary-color-green;
-        color: $primary-color-black;
-      }
-    }
-
-    &_image {
-      position: relative;
-      flex-shrink: 0;
-      width: 359px;
-      height: 394px;
-    }
   }
 }
 
@@ -226,85 +19,11 @@
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(6, auto);
     }
-
-    &__card {
-      &_image {
-        width: 250px;
-        height: 250px;
-      }
-    }
-  }
-}
-
-@media #{$media-lg} {
-  .services {
-    &__banner {
-      height: auto;
-      margin-top: 80px;
-
-      &_text {
-        gap: 30px;
-        max-width: 100%;
-
-        &__description {
-          flex: 0;
-        }
-      }
-      &_image {
-        display: none;
-      }
-    }
-  }
-}
-
-@media #{$media-md} {
-  .services {
-    &__header {
-      br {
-        display: none;
-      }
-    }
-
-    &__card {
-      padding: 30px;
-
-      &_content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        height: 100%;
-  
-        &__title {
-          margin: 0;
-          font-size: $primary-font-size-sm;
-        }
-      }
-
-      &_image {
-        width: 210px;
-        height: 210px;
-      }
-    }
   }
 }
 
 @media #{$media-sm} {
   .services {
-    &__header {
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-
-      &_title {
-        font-size: $primary-font-size-lg;
-      }
-
-      &_description {
-        text-align: center;
-      }
-    }
-
     &__card {
       height: auto;
       padding: 20px;
@@ -320,11 +39,7 @@
     }
 
     &__banner {
-      &_text {
-        button {
-          width: 100%;
-        }
-      }
+      margin-top: 60px;
     }
   }
 }

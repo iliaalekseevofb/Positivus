@@ -1,3 +1,4 @@
+import Button from '../../elements/Button/Button';
 import styles from './Hero.module.scss';
 
 const Hero = (): JSX.Element => {
@@ -14,9 +15,7 @@ const Hero = (): JSX.Element => {
         <p className={styles.hero__text_description}>
           Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
         </p>
-        <button className={styles.hero__text_button}>
-          Book a consultation
-        </button>
+        <Button text='Book a consultation' />
       </div>
       <div id='banner_desktop' className={styles.hero__banner}>
         {/* eslint-disable-next-line @next/next/no-img-element */}

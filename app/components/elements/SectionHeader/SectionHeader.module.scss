@@ -1,0 +1,48 @@
+@import '/app/page.module.scss';
+
+.sectionHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+  margin-bottom: 40px;
+
+  &__title {
+    margin: 0;
+    padding: 0 7px;
+    font-size: $primary-font-size-xl;
+    line-height: 50px;
+    background-color: $primary-color-green;
+    border-radius: 7px;
+    white-space: nowrap;
+  }
+
+  &__description {
+    max-width: 600px;
+    margin: 0;
+    font-size: $primary-font-size-2xs;
+    line-height: 23px;
+  }
+}
+
+@media #{$media-sm} {
+  .sectionHeader {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+
+    &__title {
+      font-size: $primary-font-size-md;
+    }
+
+    &__description {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+}

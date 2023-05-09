@@ -1,0 +1,36 @@
+@import '/app/page.module.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-size: $primary-font-size-xs;
+  font-weight: $primary-font-weight-normal;
+  transition: #{$primary-transition};
+  background-color: $primary-color-black;
+  padding: 20px 35px;
+  color: #FFF;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: $primary-color-green;
+  color: $primary-color-black;
+}
+
+@media #{$media-xl} {
+  .button {
+    font-size: $primary-font-size-2xs;
+    padding: 15px 25px;
+  }
+}
+
+@media #{$media-sm} {
+  .button {
+    width: 100%;
+  }
+}
