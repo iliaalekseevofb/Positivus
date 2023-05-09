@@ -4,6 +4,7 @@ import Hero from './components/modules/Hero/Hero'
 import styles from './page.module.scss'
 import Brands from './components/modules/Brands/Brands'
 import Services from './components/modules/Services/Services'
+import CaseStudies from './components/modules/CaseStudies/CaseStudies'
 
 export default function Home(): React.ReactNode {
   return (
@@ -13,6 +14,7 @@ export default function Home(): React.ReactNode {
         <Hero />
         <Brands />
         <Services />
+        <CaseStudies />
       </div>
     </main>
   )
