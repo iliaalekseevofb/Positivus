@@ -92,7 +92,7 @@ const WorkingProcesses = (): JSX.Element => {
   ])
 
   return (
-    <div className={styles.workingProcesses}>
+    <section className={styles.workingProcesses}>
       <SectionHeader
         title='Our Working Process'
         description='Step-by-Step Guide to Achieving Your Business Goals'
@@ -110,7 +110,7 @@ const WorkingProcesses = (): JSX.Element => {
           />
         )) }
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -6,6 +6,7 @@ import Brands from './components/modules/Brands/Brands'
 import Services from './components/modules/Services/Services'
 import CaseStudies from './components/modules/CaseStudies/CaseStudies'
 import WorkingProcesses from './components/modules/WorkingProcesses/WorkingProcesses'
+import Team from './components/modules/Team/Team'
 
 export default function Home(): React.ReactNode {
   return (
@@ -17,6 +18,7 @@ export default function Home(): React.ReactNode {
         <Services />
         <CaseStudies />
         <WorkingProcesses />
+        <Team />
       </div>
     </main>
   )
