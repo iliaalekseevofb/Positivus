@@ -41,10 +41,6 @@
       object-fit: contain;
     }
   }
-
-  &__banner[id='banner_mobile'] {
-    display: none;
-  }
 }
 
 @media #{$media-xl} {
@@ -85,15 +81,19 @@
 
 @media #{$media-sm} {
   .hero {
-    &__banner[id='banner_desktop'] {
+    &__banner {
       display: none;
-    }
-  
-    &__banner[id='banner_mobile'] {
-      display: block;
     }
 
     &__text {
+      &_title {
+        text-align: center;
+      }
+
+      &_description {
+        text-align: center;
+      }
+
       &_button {
         width: 100%;
       }

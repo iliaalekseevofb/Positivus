@@ -5,6 +5,7 @@ import styles from './page.module.scss'
 import Brands from './components/modules/Brands/Brands'
 import Services from './components/modules/Services/Services'
 import CaseStudies from './components/modules/CaseStudies/CaseStudies'
+import WorkingProcesses from './components/modules/WorkingProcesses/WorkingProcesses'
 
 export default function Home(): React.ReactNode {
   return (
@@ -15,6 +16,7 @@ export default function Home(): React.ReactNode {
         <Brands />
         <Services />
         <CaseStudies />
+        <WorkingProcesses />
       </div>
     </main>
   )
