@@ -1,0 +1,262 @@
+@import '/app/page.module.scss';
+
+.footer {
+  margin-top: 80px;
+  margin-bottom: -60px;
+  padding: 50px 60px;
+  border-radius: 45px 45px 0px 0px;
+  background-color: $primary-color-black;
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_logo {
+      position: relative;
+      width: 180px;
+      height: 29px;
+    }
+
+    &_links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      a {
+        color: #FFF;
+        font-size: $primary-font-size-2xs;
+        line-height: 23px;
+      }
+    }
+
+    &_social {
+      display: flex;
+      align-self: center;
+      gap: 20px;
+
+      &__link {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__feedback {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-top: 60px;
+
+    &_contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 25px;
+
+      h5 {
+        width: fit-content;
+        margin: 0;
+        padding: 0 7px;
+        background-color: $primary-color-green;
+        border-radius: 7px;
+        font-size: $primary-font-size-xs;
+        font-weight: $primary-font-weight-semibold;
+        line-height: 28px;
+      }
+
+      p {
+        margin: 0;
+        color: #FFF;
+        font-size: $primary-font-size-2xs;
+        line-height: 23px;
+      }
+    }
+
+    &_email {
+      &__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 58px 40px;
+        border-radius: 14px;
+        background-color: #292A32;
+        
+        input {
+          height: 68px;
+          padding: 0 20px;
+          background-color: transparent;
+          border: 1px solid #FFF;
+          font-size: $primary-font-size-2xs;
+          line-height: 23px;
+          color: #FFF;
+          outline: none;
+          border-radius: 14px;
+          caret-color: #FFF;
+        }
+
+        input::placeholder {
+          color: #FFF;
+        }
+
+        button {
+          height: 68px;
+          padding: 0 35px;
+          font-size: $primary-font-size-xs;
+          line-height: 28px;
+          color: $primary-color-black;
+          background-color: $primary-color-green;
+          border-radius: 14px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          transition: #{$primary-transition};
+          white-space: nowrap;
+        }
+
+        button:hover {
+          background-color: $primary-color-gray;
+        }
+      }
+    }
+  }
+
+  &__additional {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid #FFF;
+    font-size: $primary-font-size-2xs;
+    line-height: 23px;
+    color: #FFF;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: #FFF;
+    }
+  }
+}
+
+@media #{$media-xl} {
+  .footer {
+    &__navigation {
+      &_social {
+        display: none;
+      }
+    }
+
+    &__feedback {
+      &_email {
+        &__form {
+          flex-direction: column;
+          padding: 40px 30px;
+
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$media-lg} {
+  .footer {
+    margin-bottom: -50px;
+    padding: 50px 40px;
+
+    &__navigation {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+
+      &_links {
+        gap: 0;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    &__feedback {
+      margin-top: 40px;
+
+      &_email {
+        &__form {
+          padding: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media #{$media-md} {
+  .footer {
+    margin-bottom: -40px;
+  }
+}
+
+@media #{$media-sm} {
+  .footer {
+    margin-bottom: -30px;
+    padding: 40px 30px;
+
+    &__navigation {
+      &_links {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    &__feedback {
+      width: 100%;
+      flex-direction: column;
+
+      &_contacts {
+        width: 100%;
+        align-items: center;
+
+        p {
+          text-align: center;
+        }
+      }
+
+      &_email {
+        width: 100%;
+
+        input {
+          box-sizing: border-box;
+          width: 100%;
+        }
+
+        button {
+          padding: 0 20px;
+        }
+      }
+    }
+
+    &__additional {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+  }
+}
+
+@media #{$media-xs} {
+  .footer {
+    border-radius: 0;
+    padding: 40px 20px;
+    margin: 60px -30px -40px -30px;
+  }
+}

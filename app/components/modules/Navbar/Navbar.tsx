@@ -3,20 +3,9 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { navLinks } from '@/app/utils/constants'
+import { NavLink } from '@/app/utils/interfaces'
 import styles from './Navbar.module.scss'
-
-interface NavLink {
-  id: string,
-  text: string
-}
-
-const navLinks: NavLink[] = [
-  { id: 'AboutUs', text: 'About Us' },
-  { id: 'Services', text: 'Services' },
-  { id: 'UseCases', text: 'Use Cases' },
-  { id: 'Team', text: 'Team' },
-  { id: 'Testimonials', text: 'Testimonials' },
-]
 
 const Navbar = (): JSX.Element => {
   const [isDropdownOpened, setIsDropdownOpened] = useState<boolean>(false);

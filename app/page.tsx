@@ -7,6 +7,7 @@ import Services from './components/modules/Services/Services'
 import CaseStudies from './components/modules/CaseStudies/CaseStudies'
 import WorkingProcesses from './components/modules/WorkingProcesses/WorkingProcesses'
 import Team from './components/modules/Team/Team'
+import Footer from './components/modules/Footer/Footer'
 
 export default function Home(): React.ReactNode {
   return (
@@ -19,6 +20,7 @@ export default function Home(): React.ReactNode {
         <CaseStudies />
         <WorkingProcesses />
         <Team />
+        <Footer />
       </div>
     </main>
   )
